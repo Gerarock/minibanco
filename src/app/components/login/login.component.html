@@ -1,0 +1,48 @@
+<div class="container-fluid mt-5"
+     fxLayout
+     fxLayout.xs="column"
+     fxLayoutAlign="center"
+     fxLayoutGap="0"
+     fxLayoutGap.xs="0">
+  <div class="login-card mat-elevation-z8 mb-5" fxFlex="45%">
+    <img class="logo-login" src="https://web.bancoripley.cl/logo-bancoripley.5860169353c9e41d5bcf.svg">
+    <main class="login-content"
+          fxLayout="column"
+          fxLayoutAlign="center center">
+      <span class="login-welcome">Bienvenido</span>
+      <span class="login-header mb-5 mt-3">Ingresa a tu cuenta</span>
+      <!-- login form -->
+      <form [formGroup]="form" class="login-form align-items-center" fxLayout="column" (ngSubmit)="login($event)">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label class="logo">RUT</mat-label>
+          <input matInput placeholder="Ingresa tu RUT" type="text" formControlName='rut'>
+          <mat-icon matPrefix>portrait</mat-icon>
+          <mat-error *ngIf="form.controls.rut.hasError('required')">
+            El RUT es obligatorio
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Clave</mat-label>
+          <input matInput placeholder="Ingresa tu clave" type="password" formControlName='password'>
+          <mat-icon matPrefix>lock_outline</mat-icon>
+          <mat-error *ngIf="form.controls.password.hasError('required')">
+            La clave es obligatoria
+          </mat-error>
+        </mat-form-field>
+        <div class="mt-3">
+          <button mat-flat-button color="primary" type="submit">Ingresar</button>
+        </div>
+      </form>
+      <div class="mt-4">
+        <span>¿Aún no tienes una cuenta?</span><a class="forgot-link" (click)="register()"><strong>Regístrate aquí</strong></a>
+      </div>
+    </main>
+
+  </div> 
+  <div class="login-card login-content mat-elevation-z8" 
+          fxFlex=45%
+          fxLayout="column"
+          fxLayoutAlign="end start"
+          [ngStyle]="unsplashClass()">
+  </div>
+</div>

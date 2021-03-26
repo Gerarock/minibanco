@@ -1,0 +1,16 @@
+<div class="contenedor">
+    <span class="title mb-5 mt-3">Tu saldo disponible es:</span>
+    <span class="login-header mb-5 mt-3">$0</span>
+    <form [formGroup]="form" class="login-form align-items-center" fxLayout="column" (ngSubmit)="cargarSaldo($event)">
+        <mat-form-field>
+            <mat-label class="logo">Monto</mat-label>
+            <input matInput placeholder="Ingresa monto a depositar" type="number" formControlName='monto' maxlength="15" min="1" max="15">
+            <mat-error *ngIf="form.controls.monto.hasError('required')">
+                * El monto es obligatorio
+            </mat-error>
+        </mat-form-field>
+        <div class="mt-3">
+            <button mat-flat-button color="primary" type="submit">Depositar</button>
+        </div>
+    </form>
+</div>

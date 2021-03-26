@@ -1,1 +1,191 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; background: rgb(248 248 248); font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/****************************/
+/* Estilos componente Login */
+/****************************/
+
+.full-width {
+    width: 60%;
+  }
+  .width-register {
+    width: 50%;
+  }
+  .logo-login{
+    position: absolute;
+    width: 8%;
+    height: auto;
+    margin-top: 1em;
+    margin-left: 1em;
+  }
+  .logo-home{
+    position: absolute;
+    width: 8%;
+    height: auto;
+    margin-top: 0.6em;
+    margin-left: 3em;
+  }
+  .size-icon{
+    font-size: 1.9em;
+    margin-bottom: 0.5em;
+    cursor: pointer;
+  }
+  .icon-logout {
+    cursor: pointer;
+  }
+  .login-card {
+    min-height: 80vh;
+    animation: fadein 1s ease-in-out;
+  }
+  .login-content {
+    animation: fadein 1.5s ease-in-out;
+    min-height: 100%;
+    height: 80vh;
+  }
+  .login-welcome{
+    margin-bottom: 0.4rem;
+    letter-spacing: 0.1rem;
+    font-size: 1.3rem;
+    color: #4b4b4d;
+    animation: fadein 1.75s ease-in-out;
+  }
+  .login-button{
+    background-color: darkviolet !important;
+  }
+  .login-header {
+    font-size: 2.4rem;
+    color: #573881;
+    letter-spacing: 0.1rem;
+    font-weight: bold;
+    animation: fadein 1.75s ease-in-out;
+  }
+  .login-form {
+    width: 80%;
+  }
+  .forgot-link {
+    margin-top: 1rem;
+    text-decoration: none;
+    color: #573881;
+    margin-left: 0.4rem;
+  }
+  .login-aside-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 80vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.15);
+  }
+  
+  .login-aside-hr {
+    height: 0.5rem;
+    width: 8rem;
+    border: none;
+    outline: none;
+    background-color: white;
+    position: relative;
+    z-index: 5;
+    margin: 0 0 8rem 3rem;
+    animation: slideright 4s ease-out;
+  }
+  
+  .login-welcome-text {
+    color: white;
+    letter-spacing: 0.03rem;
+    margin: 0 0 2rem 3rem;
+    font-size: 2.75rem;
+    position: relative;
+    z-index: 5;
+    animation: slideright 2s ease-out;
+  }
+  
+  .login-button{
+    font-weight: 100;
+    width:190px;
+    font-size: 1.1rem;
+  }
+
+  @media screen and (max-width: 959px) {
+  .login-aside {
+      display: none;
+    }
+  .container-fluid {
+    width: 100%;
+  }
+  }
+
+/******************************/
+/* Estilos Material Navigation*/
+/******************************/
+
+  .example-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  
+   .example-sidenav-container {
+    flex: 1;
+  }
+  
+  .example-sidenav{
+    color: #d36423;
+  }
+  
+  .mat-list-item{
+    color: black;
+    opacity: 0.9;
+  }
+  
+  .mat-drawer{
+    opacity: 0.9;
+    background:White;
+  }
+  
+  .mat-toolbar {
+    opacity: 0.9;
+    background: #4f2d7f;
+    color: white;
+  }
+  
+  .example-sidenav-content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f8f8;
+    opacity: 0.9;
+  }
+  
+  .example-toolbar {
+      z-index: 2;
+  }
+  
+  .example-fill-remaining-space {
+    flex: 1 1 auto;
+  }
+
+  .color-icon {
+      color: #4f2d7f !important;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+    color: #573881;
+    letter-spacing: 0.1rem;
+    font-weight: bold;
+    animation: fadein 1.75s ease-in-out;
+  }
+ 
+  .contenedor {
+    display: flex;
+    flex-direction: column;
+    margin:1rem auto;
+    max-width: 600px;
+} 

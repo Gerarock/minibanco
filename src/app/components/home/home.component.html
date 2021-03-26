@@ -1,0 +1,59 @@
+<div class="example-container">
+    <mat-toolbar class="example-toolbar">
+        <mat-icon (click)="isExpanded = !isExpanded" class="size-icon">menu</mat-icon>
+        <img class="logo-home" src="../../../assets/img/logo-banco-ripley.jpg">
+        <span class="example-fill-remaining-space"></span>
+        <div (click)="logout()">
+            <mat-icon class="icon-logout">logout</mat-icon><span class="ml-2">Cerrar sesión</span>
+        </div>
+    </mat-toolbar>
+
+    <mat-sidenav-container class="example-sidenav-container" autosize>
+        <mat-sidenav #sidenav class="example-sidenav" mode="side" opened="true">
+            <mat-nav-list class="dashboard">
+                
+                <a mat-list-item class="mt-5">
+                    <mat-icon class="color-icon" mat-list-icon>account_circle</mat-icon>
+                    <p matLine *ngIf="isExpanded">¡Hola, {{usuario}}!</p>
+                </a>
+
+                <mat-divider class="mt-5"></mat-divider>
+
+                <mat-divider></mat-divider>
+
+                <a mat-list-item (click)="toggleActive($event, 'cargasaldo')" >
+                    <mat-icon class="color-icon" mat-list-icon>inbox</mat-icon>
+                    <p matLine *ngIf="isExpanded">Carga de Saldo</p>
+                </a>
+
+                <mat-divider></mat-divider>
+
+                <a mat-list-item (click)="toggleActive($event, 'retirosaldo')" >
+                    <mat-icon class="color-icon" mat-list-icon>star</mat-icon>
+                    <p matLine *ngIf="isExpanded">Retiro de Saldo</p>
+                </a>
+
+                <mat-divider></mat-divider>
+
+                <a mat-list-item (click)="toggleActive($event, 'tranferencia')">
+                    <mat-icon class="color-icon" mat-list-icon>mail</mat-icon>
+                    <p matLine *ngIf="isExpanded">Transferencia</p>
+                </a>
+
+                <mat-divider></mat-divider>
+
+                <a mat-list-item (click)="toggleActive($event, 'movimientos')">
+                    <mat-icon class="color-icon" mat-list-icon>delete</mat-icon>
+                    <p matLine *ngIf="isExpanded">Listado de Movimientos</p>
+                </a>
+
+            </mat-nav-list>
+        </mat-sidenav>
+
+        <div class="example-sidenav-content">
+            <app-carga-saldo *ngIf="menu === 'cargasaldo'"></app-carga-saldo>
+            <app-retiro-saldo *ngIf="menu === 'retirosaldo'"></app-retiro-saldo>
+        </div>
+
+    </mat-sidenav-container>
+</div>
